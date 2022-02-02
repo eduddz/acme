@@ -1,0 +1,56 @@
+.consultar {
+    width: 1400px;
+    
+    fieldset {
+        margin: 40px 0 60px;
+        padding: 15px 0 30px;
+        border-radius: 15px;
+
+        legend {
+            margin: 0 50px;
+            padding: 0 20px;
+        }
+
+        input {
+            margin: 0 70px 30px;
+            padding: 10px;
+
+        }
+
+        table {
+            margin: auto;
+            width: 1260px;
+            border-collapse: collapse;
+        }
+    }
+}
+
+td {
+    padding: 2px 5px;
+    font-size: 14px; 
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+th {
+    background: rgb(0, 119, 255);
+    color: white
+}
+
+.data {
+    width: 100px;
+}
+
+.cpf {
+    width: 130px;
+}
+
+.sexo {
+    width: 60px;
+}
+
+.status {
+    width: 80px;
+}
