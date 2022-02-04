@@ -1,8 +1,9 @@
+require('dotenv/config')
 const express = require('express');
 const cors = require('cors');
 const db = require('../server/db')
-require('dotenv/config')
 const app = express();
+const port = process.env.PORT_SERVER || 8080;
 
 app.use(express.json());
 app.use(cors());
@@ -60,10 +61,10 @@ app.put('/pacientes/alterar/:id_pacientes', async (req, res) => {
         });
     });
 
-app.listen(3001, () => {
-    console.log('servidor funcionando')
-    db.connect((err) => {
-        if (err) throw err
-        console.log('database connected')
+    app.listen(port, () => {
+        console.log('Servidor rodando na porta ' + port);
+        db.connect((err) => {
+            if (err) throw err
+            console.log('Banco de dados está conectado');
+        })
     })
-});
