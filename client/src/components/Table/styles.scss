@@ -1,0 +1,25 @@
+.table {
+    margin: 20px;
+    border-collapse: separate;
+    width: calc(100% - 40px);
+
+    thead {
+
+        tr {
+            background-color: rgb(163, 163, 163);
+        }
+
+        th {
+            padding: 10px;
+        }
+    }
+
+    tr {
+        background-color: rgb(235, 235, 235);
+    }
+
+    td {
+        height: 80px;
+        text-align: center;
+    }
+}

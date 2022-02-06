@@ -14,7 +14,6 @@ app.get('/pacientes', async (req, res) => {
     await connection.query(sql, (err, result) =>  {
         if (err) throw err;
         res.send(result);
-        console.log(result);
     })
 })
 
@@ -50,8 +49,8 @@ app.put('/pacientes/alterar/:cpf', async (req, res) => {
     await connection.query(sql_verificar, [cpf], (err, result) => {
         if (err) console.log(err);
         if(result.length === 1) {
-            const sql_inserir = `UPDATE pacientes SET nome = ?, data_de_nascimento = ?, sexo = ?, endereco = ?, status = ?`;
-            connection.query(sql_inserir, [nome, data_de_nascimento, sexo, endereco, status, foto_de_perfil], (err, result) => {
+            const sql_inserir = `UPDATE pacientes SET nome = ?, data_de_nascimento = ?, sexo = ?, endereco = ?, status = ? WHERE cpf = ?`;
+            connection.query(sql_inserir, [nome, data_de_nascimento, sexo, endereco, status, cpf], (err, result) => {
                 if (err) console.log(err);
                 console.log('Usuário alterado com sucesso');
                 res.send(result);
@@ -63,7 +62,7 @@ app.put('/pacientes/alterar/:cpf', async (req, res) => {
     app.get('/create-table', () => {
         console.log('Criando a tabela');
         try {
-            connection.query('CREATE TABLE IF NOT EXISTS `banco`.`pacientes` (`idusuarios` INT NOT NULL AUTO_INCREMENT, `nome` VARCHAR(45) NOT NULL, `data_de_nascimento` DATE NOT NULL, `cpf` VARCHAR(11) NOT NULL, `sexo` VARCHAR(10) NOT NULL, `endereco` VARCHAR(70) NULL DEFAULT "Sem Endereço", `status` VARCHAR(10) NOT NULL, PRIMARY KEY (`idusuarios`));');
+            connection.query('CREATE TABLE IF NOT EXISTS `banco`.`pacientes` (`idusuarios` INT NOT NULL AUTO_INCREMENT, `nome` VARCHAR(45) NOT NULL, `data_de_nascimento` DATE NOT NULL, `cpf` VARCHAR(11) NOT NULL, `sexo` VARCHAR(10) NOT NULL, `endereco` VARCHAR(70) NULL, `status` VARCHAR(10) NOT NULL, PRIMARY KEY (`idusuarios`));');
         } catch (err) { console.log('Erro: ' + err) }
         console.log('Pronto!');
 })

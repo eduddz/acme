@@ -1,0 +1,22 @@
+.nav {
+    width: 250px;
+    height: calc(100vh - 100px);
+
+    li {
+        padding: 15px;
+        background-color: #9e0059;
+        margin: 35px 0 0 20px;
+        list-style: none;
+        cursor: pointer;
+        color: white;
+        box-shadow: 0 0 2px black;
+
+        &:hover {
+            background-color: #ff0054;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

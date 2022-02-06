@@ -1,20 +1,16 @@
-import { Header } from './components/Header';
-import { Registrar } from './components/Registrar';
-import { Consultar } from './components/Consultar';
-import { Alterar } from './components/Alterar';
+import { Header } from "./Components/Header";
+import { Routess } from "./Routes";
 
-import './app.scss';
+import "./App.scss";
 
 export function App() {
-
   return (
     <>
-      <Header />
-      <div className='flex'>
-        <Registrar />
-        <Alterar />
-        <Consultar />
-      </div>
+      <Header 
+        title="ACME" 
+        subtitle="Cadastro, alteração e consulta de pacientes"
+      />
+      <Routess />
     </>
   );
 }

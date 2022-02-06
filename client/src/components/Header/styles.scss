@@ -1,6 +1,9 @@
-header {
-    text-align: center;
-    padding: 1rem 0;
-    background: rgb(0, 119, 255);
+.header {
+    background: #390099;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100px;
 }

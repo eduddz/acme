@@ -1,10 +1,10 @@
-import './styles.scss';
+import "./styles.scss";
 
-export const Header = () => {
+export const Header = ({ title, subtitle }) => {
     return (
-        <header>
-            <h1>ACME</h1>
-            <p>Consulta e cadastro de pacientes</p>
+        <header className="header">
+            <h1>{title}</h1>
+            <p>{subtitle}</p>
         </header>
     )
 }
