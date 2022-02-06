@@ -6,7 +6,6 @@ export const Register = () => {
         <FormUser
             register="true"
             formTitle="Registrar"
-            nameButton="Registrar"
             />
     )
 }

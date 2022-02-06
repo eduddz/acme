@@ -47,4 +47,28 @@ Nodemon - para que quando houver alteração no código, não precise reiniciar 
     yarn add Nodemon
 
 
-Middleware - são funções que processam a solicitação e envia a resposta. Não é necessário para solicitações GET e DELETE, mas sim para POST e PUT, porque ambas enviam dados para o servidor e solicita ao servidor que aceite ou armazene esse dados, que está incluído em um corpo (req.body)
+### Iniciar o projeto Front-End
+
+    yarn create react-app client
+
+### Bibliotecas Front-End
+
+Sass - pré processador css
+
+    yarn add sass
+
+React Router Dom - para criar rotas no site
+
+    yarn add react-router-dom
+
+Axios - para acessar API
+
+    yarn add axios
+
+Formik - para criar formulário
+
+    yarn add formik
+
+Yup - para exibir mensagens no formulário, caso o usuário não faço o que é esperado
+
+    yarn add yup

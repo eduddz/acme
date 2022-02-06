@@ -9,7 +9,7 @@ import "./styles.scss";
 export const FormUser = ({
     formTitle, 
     register = false,
-    nameButton }) => {
+    }) => {
 
     const [animationRegister, setAnimationRegister] = useState(false)
     const [animationUpdate, setAnimationUpdate] = useState(false)
@@ -112,7 +112,7 @@ export const FormUser = ({
                     />
 
                 <button type="submit" className="button">
-                    {nameButton}
+                    {formTitle}
                 </button>
                 </Form>
             </Formik>
